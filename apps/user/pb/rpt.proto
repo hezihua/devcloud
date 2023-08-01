@@ -4,6 +4,7 @@ package devcloud.mcenter.user;
 option go_package = "hzh/devcloud/mcenter/apps/user";
 
 import "apps/user/pb/user.proto";
+import "github.com/infraboard/mcube/pb/page/page.proto";
 
 
 service RPC {
@@ -11,17 +12,11 @@ service RPC {
   rpc QueryUser(QueryUserRequest) returns(UserSet);
   // 查询用户详情
   rpc DescribeUser(DescribeUserRequest) returns(User);
-  // 创建用户
-  rpc CreateUser(CreateUserRequest) returns (User);
-   // 更新用户
-   rpc UpdateUser(UpdateUserRequest) returns (User);
-    // 删除用户
-  rpc DeleteUser(DeleteUserRequest) returns (User);
 
 }
 
 message QueryUserRequest {
-  
+  infraboard.mcube.page.PageRequest page = 1;
 }
 
 
