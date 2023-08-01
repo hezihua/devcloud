@@ -1,0 +1,38 @@
+syntax = "proto3";
+
+package devcloud.mcenter.user;
+option go_package = "hzh/devcloud/mcenter/apps/user";
+
+
+message UserSet {
+  // 用户总数
+  // @gotags: json"total"
+  int64 total = 1;
+  // 用户列表
+  //@gotages: json:"items"
+  repeated User items = 2;
+}
+
+
+message User {
+  // 用户id uuid
+  // @gotags: bson:"_id" json: "id"
+  string id = 1;
+  // @gotags: bson:"create_at" json: "create_at"
+  int64 create_at = 2;
+  // @gotags: bson:"update_at" json: "update_at"
+  int64 update_at = 3;
+  // @gotags: bson:"update_by" json: "update_by"
+  int64 update_by = 4;
+  // @gotags: bson: ",inline" json:"spec"
+  CreateUserRequest spec = 15;
+
+}
+
+message CreateUserRequest {
+  // @gotags: bson:"username" json: "username"
+  string username = 1;
+  // @gotags: bson:"password" json: "password"
+  string password = 2;
+  
+}

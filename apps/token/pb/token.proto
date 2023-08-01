@@ -1,0 +1,4 @@
+syntax = "proto3";
+
+package devcloud.mcenter.token;
+option go_package = "hzh/devcloud/mcenter/apps/token";
