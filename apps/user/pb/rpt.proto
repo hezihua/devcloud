@@ -17,12 +17,17 @@ service RPC {
 
 message QueryUserRequest {
   infraboard.mcube.page.PageRequest page = 1;
+  string keywords = 2;
 }
 
-
+enum DESCRIBE_BY {
+  USER_ID = 0;
+  USERNAME = 1;
+}
 
 message DescribeUserRequest {
-
+  DESCRIBE_BY describe_by = 1;
+  string describe_value = 2;
 }
 
 

@@ -2,6 +2,7 @@ package user
 
 import (
 	context "context"
+	"hzh/devcloud/mcenter/apps/domain"
 	"hzh/devcloud/mcenter/common/validator"
 )
 
@@ -21,6 +22,9 @@ type Service interface {
 }
 
 func (req *CreateUserRequest) Validate() error {
+	if req.Domain == "" {
+		req.Domain = domain.DEFAULT_DOMAIN
+	}
 	return validator.V().Struct(req)
 }
 
