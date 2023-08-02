@@ -69,7 +69,8 @@ gen: ## Gen Code, mcube generate enum 生成枚举的 Marshal JSON
 	@protoc -I=. -I=common/pb --go_out=. --go_opt=module=${PKG} --go-grpc_out=. --go-grpc_opt=module=${PKG} apps/*/pb/*.proto common/meta/*.proto
 	@go fmt ./...
 
-	@protoc-go-inject-tag -input=apps/*/*.pb.go
+	@protoc-go-inject-tag -input=apps/*/*.pb.go 
+	@protoc-go-inject-tag -input=common/meta/*.pb.go
 
 help: ## Display this help screen
 	@grep -h -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'

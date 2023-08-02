@@ -27,13 +27,13 @@ type Meta struct {
 
 	// 用户id uuid
 	// @gotags: bson:"_id" json: "id"
-	Id string `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
+	Id string `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty" bson:"_id"`
 	// @gotags: bson:"create_at" json: "create_at"
-	CreateAt int64 `protobuf:"varint,2,opt,name=create_at,json=createAt,proto3" json:"create_at,omitempty"`
+	CreateAt int64 `protobuf:"varint,2,opt,name=create_at,json=createAt,proto3" json:"create_at,omitempty" bson:"create_at"`
 	// @gotags: bson:"update_at" json: "update_at"
-	UpdateAt int64 `protobuf:"varint,3,opt,name=update_at,json=updateAt,proto3" json:"update_at,omitempty"`
+	UpdateAt int64 `protobuf:"varint,3,opt,name=update_at,json=updateAt,proto3" json:"update_at,omitempty" bson:"update_at"`
 	// @gotags: bson:"update_by" json: "update_by"
-	UpdateBy int64 `protobuf:"varint,4,opt,name=update_by,json=updateBy,proto3" json:"update_by,omitempty"`
+	UpdateBy int64 `protobuf:"varint,4,opt,name=update_by,json=updateBy,proto3" json:"update_by,omitempty" bson:"update_by"`
 }
 
 func (x *Meta) Reset() {
