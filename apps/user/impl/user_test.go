@@ -26,12 +26,12 @@ func TestQueryUser(t *testing.T) {
 	}
 
 	t.Log(tools.MustToJson(set))
-	
+
 }
 
 func TestDescribeUser(t *testing.T) {
 	req := &user.DescribeUserRequest{
-		DescribeBy: user.DESCRIBE_BY_USERNAME,
+		DescribeBy:    user.DESCRIBE_BY_USERNAME,
 		DescribeValue: "admin",
 	}
 	ins, err := impl.DescribeUser(ctx, req)
@@ -44,7 +44,6 @@ func TestDescribeUser(t *testing.T) {
 	if err != nil {
 		t.Fatal(err)
 	}
-
 
 }
 

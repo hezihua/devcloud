@@ -31,3 +31,10 @@ func (req *CreateUserRequest) Validate() error {
 func NewCreateUserRequest() *CreateUserRequest {
 	return &CreateUserRequest{}
 }
+
+func NewDescibeUserRequest(username string) *DescribeUserRequest {
+	return &DescribeUserRequest{
+		DescribeBy:    DESCRIBE_BY_USERNAME,
+		DescribeValue: username,
+	}
+}

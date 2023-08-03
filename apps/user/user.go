@@ -31,13 +31,13 @@ func (u *User) MarshalJSON() ([]byte, error) {
 	}{u.Meta, u.Spec})
 }
 
-func NewDefaultPageRequest () *User {
-	return &User {
+func NewDefaultPageRequest() *User {
+	return &User{
 		Spec: NewCreateUserRequest(),
 		Meta: meta.NewMeta(),
 	}
 }
-func New(req *CreateUserRequest) (*User, error ){
+func New(req *CreateUserRequest) (*User, error) {
 	// 校验必填
 	if err := req.Validate(); err != nil {
 		return nil, err
@@ -60,10 +60,10 @@ func (req *CreateUserRequest) HashPassword() error {
 	return nil
 }
 
-func (i *User) Desense (){
+func (i *User) Desense() {
 	i.Spec.Password = "****"
 }
 
-func (i *User) CheckPassword (pass string) error{
+func (i *User) CheckPassword(pass string) error {
 	return bcrypt.CompareHashAndPassword([]byte(i.Spec.Password), []byte(pass))
 }

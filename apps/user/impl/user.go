@@ -11,7 +11,7 @@ import (
 // 查询用户列表
 func (i *impl) CreateUser(ctx context.Context, in *user.CreateUserRequest) (
 	*user.User, error) {
-	
+
 	ins, err := user.New(in)
 	if err != nil {
 		return nil, err
@@ -79,23 +79,23 @@ func (i *impl) QueryUser(ctx context.Context, in *user.QueryUserRequest) (
 // 查询用户详情
 func (i *impl) DescribeUser(ctx context.Context, in *user.DescribeUserRequest) (
 	*user.User, error) {
-		//校验空 
-		// TODO
-  
-		filter := bson.M{}
+	//校验空
+	// TODO
 
-		switch in.DescribeBy {
-		case user.DESCRIBE_BY_USER_ID:
-			filter["_id"] = in.DescribeValue
-		case user.DESCRIBE_BY_USERNAME:
-			filter["username"] = in.DescribeValue
-		}
-		ins := user.NewDefaultPageRequest()
+	filter := bson.M{}
 
-		err := i.col.FindOne(ctx, filter).Decode(ins)
-		if err != nil {
-			return nil, err
-		}
+	switch in.DescribeBy {
+	case user.DESCRIBE_BY_USER_ID:
+		filter["_id"] = in.DescribeValue
+	case user.DESCRIBE_BY_USERNAME:
+		filter["username"] = in.DescribeValue
+	}
+	ins := user.NewDefaultPageRequest()
+
+	err := i.col.FindOne(ctx, filter).Decode(ins)
+	if err != nil {
+		return nil, err
+	}
 
 	return ins, nil
 }

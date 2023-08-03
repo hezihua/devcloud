@@ -3,6 +3,8 @@ package tools
 import (
 	"hzh/devcloud/mcenter/conf"
 
+	_ "hzh/devcloud/mcenter/apps"
+
 	"github.com/infraboard/mcube/app"
 )
 

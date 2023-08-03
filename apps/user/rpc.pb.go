@@ -2,7 +2,7 @@
 // versions:
 // 	protoc-gen-go v1.31.0
 // 	protoc        v4.23.4
-// source: apps/user/pb/rpt.proto
+// source: apps/user/pb/rpc.proto
 
 package user
 
@@ -51,11 +51,11 @@ func (x DESCRIBE_BY) String() string {
 }
 
 func (DESCRIBE_BY) Descriptor() protoreflect.EnumDescriptor {
-	return file_apps_user_pb_rpt_proto_enumTypes[0].Descriptor()
+	return file_apps_user_pb_rpc_proto_enumTypes[0].Descriptor()
 }
 
 func (DESCRIBE_BY) Type() protoreflect.EnumType {
-	return &file_apps_user_pb_rpt_proto_enumTypes[0]
+	return &file_apps_user_pb_rpc_proto_enumTypes[0]
 }
 
 func (x DESCRIBE_BY) Number() protoreflect.EnumNumber {
@@ -64,7 +64,7 @@ func (x DESCRIBE_BY) Number() protoreflect.EnumNumber {
 
 // Deprecated: Use DESCRIBE_BY.Descriptor instead.
 func (DESCRIBE_BY) EnumDescriptor() ([]byte, []int) {
-	return file_apps_user_pb_rpt_proto_rawDescGZIP(), []int{0}
+	return file_apps_user_pb_rpc_proto_rawDescGZIP(), []int{0}
 }
 
 type QueryUserRequest struct {
@@ -79,7 +79,7 @@ type QueryUserRequest struct {
 func (x *QueryUserRequest) Reset() {
 	*x = QueryUserRequest{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_apps_user_pb_rpt_proto_msgTypes[0]
+		mi := &file_apps_user_pb_rpc_proto_msgTypes[0]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -92,7 +92,7 @@ func (x *QueryUserRequest) String() string {
 func (*QueryUserRequest) ProtoMessage() {}
 
 func (x *QueryUserRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_apps_user_pb_rpt_proto_msgTypes[0]
+	mi := &file_apps_user_pb_rpc_proto_msgTypes[0]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -105,7 +105,7 @@ func (x *QueryUserRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use QueryUserRequest.ProtoReflect.Descriptor instead.
 func (*QueryUserRequest) Descriptor() ([]byte, []int) {
-	return file_apps_user_pb_rpt_proto_rawDescGZIP(), []int{0}
+	return file_apps_user_pb_rpc_proto_rawDescGZIP(), []int{0}
 }
 
 func (x *QueryUserRequest) GetPage() *request.PageRequest {
@@ -134,7 +134,7 @@ type DescribeUserRequest struct {
 func (x *DescribeUserRequest) Reset() {
 	*x = DescribeUserRequest{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_apps_user_pb_rpt_proto_msgTypes[1]
+		mi := &file_apps_user_pb_rpc_proto_msgTypes[1]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -147,7 +147,7 @@ func (x *DescribeUserRequest) String() string {
 func (*DescribeUserRequest) ProtoMessage() {}
 
 func (x *DescribeUserRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_apps_user_pb_rpt_proto_msgTypes[1]
+	mi := &file_apps_user_pb_rpc_proto_msgTypes[1]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -160,7 +160,7 @@ func (x *DescribeUserRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use DescribeUserRequest.ProtoReflect.Descriptor instead.
 func (*DescribeUserRequest) Descriptor() ([]byte, []int) {
-	return file_apps_user_pb_rpt_proto_rawDescGZIP(), []int{1}
+	return file_apps_user_pb_rpc_proto_rawDescGZIP(), []int{1}
 }
 
 func (x *DescribeUserRequest) GetDescribeBy() DESCRIBE_BY {
@@ -186,7 +186,7 @@ type UpdateUserRequest struct {
 func (x *UpdateUserRequest) Reset() {
 	*x = UpdateUserRequest{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_apps_user_pb_rpt_proto_msgTypes[2]
+		mi := &file_apps_user_pb_rpc_proto_msgTypes[2]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -199,7 +199,7 @@ func (x *UpdateUserRequest) String() string {
 func (*UpdateUserRequest) ProtoMessage() {}
 
 func (x *UpdateUserRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_apps_user_pb_rpt_proto_msgTypes[2]
+	mi := &file_apps_user_pb_rpc_proto_msgTypes[2]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -212,7 +212,7 @@ func (x *UpdateUserRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use UpdateUserRequest.ProtoReflect.Descriptor instead.
 func (*UpdateUserRequest) Descriptor() ([]byte, []int) {
-	return file_apps_user_pb_rpt_proto_rawDescGZIP(), []int{2}
+	return file_apps_user_pb_rpc_proto_rawDescGZIP(), []int{2}
 }
 
 type DeleteUserRequest struct {
@@ -224,7 +224,7 @@ type DeleteUserRequest struct {
 func (x *DeleteUserRequest) Reset() {
 	*x = DeleteUserRequest{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_apps_user_pb_rpt_proto_msgTypes[3]
+		mi := &file_apps_user_pb_rpc_proto_msgTypes[3]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -237,7 +237,7 @@ func (x *DeleteUserRequest) String() string {
 func (*DeleteUserRequest) ProtoMessage() {}
 
 func (x *DeleteUserRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_apps_user_pb_rpt_proto_msgTypes[3]
+	mi := &file_apps_user_pb_rpc_proto_msgTypes[3]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -250,14 +250,14 @@ func (x *DeleteUserRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use DeleteUserRequest.ProtoReflect.Descriptor instead.
 func (*DeleteUserRequest) Descriptor() ([]byte, []int) {
-	return file_apps_user_pb_rpt_proto_rawDescGZIP(), []int{3}
+	return file_apps_user_pb_rpc_proto_rawDescGZIP(), []int{3}
 }
 
-var File_apps_user_pb_rpt_proto protoreflect.FileDescriptor
+var File_apps_user_pb_rpc_proto protoreflect.FileDescriptor
 
-var file_apps_user_pb_rpt_proto_rawDesc = []byte{
+var file_apps_user_pb_rpc_proto_rawDesc = []byte{
 	0x0a, 0x16, 0x61, 0x70, 0x70, 0x73, 0x2f, 0x75, 0x73, 0x65, 0x72, 0x2f, 0x70, 0x62, 0x2f, 0x72,
-	0x70, 0x74, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x12, 0x15, 0x64, 0x65, 0x76, 0x63, 0x6c, 0x6f,
+	0x70, 0x63, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x12, 0x15, 0x64, 0x65, 0x76, 0x63, 0x6c, 0x6f,
 	0x75, 0x64, 0x2e, 0x6d, 0x63, 0x65, 0x6e, 0x74, 0x65, 0x72, 0x2e, 0x75, 0x73, 0x65, 0x72, 0x1a,
 	0x17, 0x61, 0x70, 0x70, 0x73, 0x2f, 0x75, 0x73, 0x65, 0x72, 0x2f, 0x70, 0x62, 0x2f, 0x75, 0x73,
 	0x65, 0x72, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x1a, 0x2e, 0x67, 0x69, 0x74, 0x68, 0x75, 0x62,
@@ -301,20 +301,20 @@ var file_apps_user_pb_rpt_proto_rawDesc = []byte{
 }
 
 var (
-	file_apps_user_pb_rpt_proto_rawDescOnce sync.Once
-	file_apps_user_pb_rpt_proto_rawDescData = file_apps_user_pb_rpt_proto_rawDesc
+	file_apps_user_pb_rpc_proto_rawDescOnce sync.Once
+	file_apps_user_pb_rpc_proto_rawDescData = file_apps_user_pb_rpc_proto_rawDesc
 )
 
-func file_apps_user_pb_rpt_proto_rawDescGZIP() []byte {
-	file_apps_user_pb_rpt_proto_rawDescOnce.Do(func() {
-		file_apps_user_pb_rpt_proto_rawDescData = protoimpl.X.CompressGZIP(file_apps_user_pb_rpt_proto_rawDescData)
+func file_apps_user_pb_rpc_proto_rawDescGZIP() []byte {
+	file_apps_user_pb_rpc_proto_rawDescOnce.Do(func() {
+		file_apps_user_pb_rpc_proto_rawDescData = protoimpl.X.CompressGZIP(file_apps_user_pb_rpc_proto_rawDescData)
 	})
-	return file_apps_user_pb_rpt_proto_rawDescData
+	return file_apps_user_pb_rpc_proto_rawDescData
 }
 
-var file_apps_user_pb_rpt_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
-var file_apps_user_pb_rpt_proto_msgTypes = make([]protoimpl.MessageInfo, 4)
-var file_apps_user_pb_rpt_proto_goTypes = []interface{}{
+var file_apps_user_pb_rpc_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
+var file_apps_user_pb_rpc_proto_msgTypes = make([]protoimpl.MessageInfo, 4)
+var file_apps_user_pb_rpc_proto_goTypes = []interface{}{
 	(DESCRIBE_BY)(0),            // 0: devcloud.mcenter.user.DESCRIBE_BY
 	(*QueryUserRequest)(nil),    // 1: devcloud.mcenter.user.QueryUserRequest
 	(*DescribeUserRequest)(nil), // 2: devcloud.mcenter.user.DescribeUserRequest
@@ -324,7 +324,7 @@ var file_apps_user_pb_rpt_proto_goTypes = []interface{}{
 	(*UserSet)(nil),             // 6: devcloud.mcenter.user.UserSet
 	(*User)(nil),                // 7: devcloud.mcenter.user.User
 }
-var file_apps_user_pb_rpt_proto_depIdxs = []int32{
+var file_apps_user_pb_rpc_proto_depIdxs = []int32{
 	5, // 0: devcloud.mcenter.user.QueryUserRequest.page:type_name -> infraboard.mcube.page.PageRequest
 	0, // 1: devcloud.mcenter.user.DescribeUserRequest.describe_by:type_name -> devcloud.mcenter.user.DESCRIBE_BY
 	1, // 2: devcloud.mcenter.user.RPC.QueryUser:input_type -> devcloud.mcenter.user.QueryUserRequest
@@ -338,14 +338,14 @@ var file_apps_user_pb_rpt_proto_depIdxs = []int32{
 	0, // [0:2] is the sub-list for field type_name
 }
 
-func init() { file_apps_user_pb_rpt_proto_init() }
-func file_apps_user_pb_rpt_proto_init() {
-	if File_apps_user_pb_rpt_proto != nil {
+func init() { file_apps_user_pb_rpc_proto_init() }
+func file_apps_user_pb_rpc_proto_init() {
+	if File_apps_user_pb_rpc_proto != nil {
 		return
 	}
 	file_apps_user_pb_user_proto_init()
 	if !protoimpl.UnsafeEnabled {
-		file_apps_user_pb_rpt_proto_msgTypes[0].Exporter = func(v interface{}, i int) interface{} {
+		file_apps_user_pb_rpc_proto_msgTypes[0].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*QueryUserRequest); i {
 			case 0:
 				return &v.state
@@ -357,7 +357,7 @@ func file_apps_user_pb_rpt_proto_init() {
 				return nil
 			}
 		}
-		file_apps_user_pb_rpt_proto_msgTypes[1].Exporter = func(v interface{}, i int) interface{} {
+		file_apps_user_pb_rpc_proto_msgTypes[1].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*DescribeUserRequest); i {
 			case 0:
 				return &v.state
@@ -369,7 +369,7 @@ func file_apps_user_pb_rpt_proto_init() {
 				return nil
 			}
 		}
-		file_apps_user_pb_rpt_proto_msgTypes[2].Exporter = func(v interface{}, i int) interface{} {
+		file_apps_user_pb_rpc_proto_msgTypes[2].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*UpdateUserRequest); i {
 			case 0:
 				return &v.state
@@ -381,7 +381,7 @@ func file_apps_user_pb_rpt_proto_init() {
 				return nil
 			}
 		}
-		file_apps_user_pb_rpt_proto_msgTypes[3].Exporter = func(v interface{}, i int) interface{} {
+		file_apps_user_pb_rpc_proto_msgTypes[3].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*DeleteUserRequest); i {
 			case 0:
 				return &v.state
@@ -398,19 +398,19 @@ func file_apps_user_pb_rpt_proto_init() {
 	out := protoimpl.TypeBuilder{
 		File: protoimpl.DescBuilder{
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
-			RawDescriptor: file_apps_user_pb_rpt_proto_rawDesc,
+			RawDescriptor: file_apps_user_pb_rpc_proto_rawDesc,
 			NumEnums:      1,
 			NumMessages:   4,
 			NumExtensions: 0,
 			NumServices:   1,
 		},
-		GoTypes:           file_apps_user_pb_rpt_proto_goTypes,
-		DependencyIndexes: file_apps_user_pb_rpt_proto_depIdxs,
-		EnumInfos:         file_apps_user_pb_rpt_proto_enumTypes,
-		MessageInfos:      file_apps_user_pb_rpt_proto_msgTypes,
+		GoTypes:           file_apps_user_pb_rpc_proto_goTypes,
+		DependencyIndexes: file_apps_user_pb_rpc_proto_depIdxs,
+		EnumInfos:         file_apps_user_pb_rpc_proto_enumTypes,
+		MessageInfos:      file_apps_user_pb_rpc_proto_msgTypes,
 	}.Build()
-	File_apps_user_pb_rpt_proto = out.File
-	file_apps_user_pb_rpt_proto_rawDesc = nil
-	file_apps_user_pb_rpt_proto_goTypes = nil
-	file_apps_user_pb_rpt_proto_depIdxs = nil
+	File_apps_user_pb_rpc_proto = out.File
+	file_apps_user_pb_rpc_proto_rawDesc = nil
+	file_apps_user_pb_rpc_proto_goTypes = nil
+	file_apps_user_pb_rpc_proto_depIdxs = nil
 }
