@@ -1,5 +1,7 @@
 package main
 
-func main() {
+import "hzh/devcloud/mcenter/cmd"
 
+func main() {
+	cmd.Execute()
 }

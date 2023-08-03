@@ -44,3 +44,7 @@ func (t *Token) ExpiredTime() time.Time {
 	dura := time.Duration(t.AccessExpiredAt * int64(time.Second))
 	return time.Unix(t.IssueAt, 0).Add(dura)
 }
+
+func NewIssueTokenRequest() *IssueTokenRequest {
+	return &IssueTokenRequest{}
+}

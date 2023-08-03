@@ -3,12 +3,14 @@ package impl_test
 import (
 	"hzh/devcloud/mcenter/apps/token"
 	"testing"
+
+	"github.com/infraboard/mcube/exception"
 )
 
 func TestIssueToken(t *testing.T) {
 	// TODO 用户名密码错误，异常信息 自定义
 	req := &token.IssueTokenRequest{
-		Username: "admin",
+		Username: "admin1",
 		Password: "123456",
 	}
 	tk, err := impl.IssueToken(ctx, req)
@@ -19,9 +21,10 @@ func TestIssueToken(t *testing.T) {
 }
 
 func TestValidateToken(t *testing.T) {
-	req := token.NewValidateTokenRequirest("cj5lkluigirrld45irj0")
+	req := token.NewValidateTokenRequirest("fdsafdsa")
 	tk, err := impl.ValidateToken(ctx, req)
 	if err != nil {
+		t.Fatal(err.(exception.APIException).ToJson())
 		t.Fatal(err)
 	}
 	t.Log(tk)

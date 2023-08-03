@@ -5,7 +5,9 @@ import (
 	"hzh/devcloud/mcenter/apps/token"
 	"hzh/devcloud/mcenter/apps/token/provider"
 
+	"github.com/infraboard/mcube/exception"
 	"go.mongodb.org/mongo-driver/bson"
+	"go.mongodb.org/mongo-driver/mongo"
 )
 
 func (i *impl) IssueToken(ctx context.Context, in *token.IssueTokenRequest) (
@@ -37,6 +39,9 @@ func (i *impl) ValidateToken(ctx context.Context, in *token.ValidateTokenRequest
 		"_id": in.AccessToken,
 	}).Decode(tk)
 	if err != nil {
+		if err == mongo.ErrNoDocuments {
+			return nil, exception.NewNotFound("%s not found", in.AccessToken)
+		}
 		return nil, err
 	}
 

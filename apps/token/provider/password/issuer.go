@@ -6,7 +6,7 @@ import (
 	"hzh/devcloud/mcenter/apps/token"
 	"hzh/devcloud/mcenter/apps/token/provider"
 	"hzh/devcloud/mcenter/apps/user"
-	logger "hzh/devcloud/mcenter/common/log"
+	"hzh/devcloud/mcenter/common/logger"
 
 	"github.com/infraboard/mcube/app"
 	"github.com/rs/xid"
