@@ -12,7 +12,7 @@ type Service interface {
 	RPCServer
 }
 
-func NewValidateTokenRequirest(ak string) *ValidateTokenRequest {
+func NewValidateTokenRequest(ak string) *ValidateTokenRequest {
 	return &ValidateTokenRequest{
 		AccessToken: ak,
 	}

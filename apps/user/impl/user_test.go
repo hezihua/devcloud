@@ -40,7 +40,7 @@ func TestDescribeUser(t *testing.T) {
 	}
 
 	t.Log(tools.MustToJson(ins))
-	err = ins.CheckPassword("1234566")
+	err = ins.CheckPassword("123456")
 	if err != nil {
 		t.Fatal(err)
 	}

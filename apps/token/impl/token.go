@@ -49,5 +49,5 @@ func (i *impl) ValidateToken(ctx context.Context, in *token.ValidateTokenRequest
 	if err != nil {
 		return nil, err
 	}
-	return nil, nil
+	return tk, nil
 }

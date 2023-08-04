@@ -21,7 +21,7 @@ func TestIssueToken(t *testing.T) {
 }
 
 func TestValidateToken(t *testing.T) {
-	req := token.NewValidateTokenRequirest("fdsafdsa")
+	req := token.NewValidateTokenRequest("fdsafdsa")
 	tk, err := impl.ValidateToken(ctx, req)
 	if err != nil {
 		t.Fatal(err.(exception.APIException).ToJson())
